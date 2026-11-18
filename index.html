@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KSN Cricket — Cricket Store</title>
+  <meta name="description" content="Hand-picked cricket bats, balls, gloves and protective gear for club and county players." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#shop">Skip to shop</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <p>Free delivery on orders over ₹150 · Ships in 24 hours</p>
+      <p class="topbar__meta">Season clearance — up to 30% off</p>
+    </div>
+
+    <div class="header-main">
+      <a class="brand" href="#" aria-label="KSN Cricket home">
+        <span class="brand__mark" aria-hidden="true">◗</span>
+        <span class="brand__text">KSN<span>Cricket</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#why-us">Why us</a>
+      </nav>
+
+      <div class="header-actions">
+        <form class="search" role="search" id="search-form">
+          <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="m16.5 16.5 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <input
+            id="search-input"
+            type="search"
+            name="q"
+            placeholder="Search bats, balls, gloves…"
+            aria-label="Search products"
+            autocomplete="off"
+          />
+        </form>
+
+        <button class="cart-button" id="cart-open" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 5h2.2l2.1 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L21 8H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="10" cy="20" r="1.4" fill="currentColor" />
+            <circle cx="18" cy="20" r="1.4" fill="currentColor" />
+          </svg>
+          <span class="cart-button__label">Cart</span>
+          <span class="cart-count" id="cart-count" aria-hidden="true">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Est. 2026 · Club cricket specialists</p>
+        <h1>Gear that earns<br />its place in the bag.</h1>
+        <p class="hero__lede">
+          English willow, hand-stitched leather and protective kit tested through a full
+          season of league cricket. No gimmicks — just gear that lasts.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#shop">Shop the collection</a>
+          <a class="btn btn--ghost" href="#why-us">How we test gear</a>
+        </div>
+        <dl class="hero__stats">
+          <div><dt>12k+</dt><dd>Players kitted out</dd></div>
+          <div><dt>4.8/5</dt><dd>Average rating</dd></div>
+          <div><dt>2 yr</dt><dd>Bat warranty</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero__visual">
+        <figure class="hero__photo">
+          <img
+            src="assets/products/hero.webp"
+            alt="Cricketer in a helmet and batting gloves holding a bat under studio lighting"
+            width="900"
+            height="1150"
+            fetchpriority="high"
+          />
+        </figure>
+        <div class="hero__ball" aria-hidden="true"></div>
+        <p class="hero__tag"><span>Grade 1</span><strong>English Willow</strong></p>
+      </div>
+    </section>
+
+    <!-- Category strip -->
+    <section class="categories" id="categories" aria-labelledby="categories-title">
+      <h2 class="sr-only" id="categories-title">Shop by category</h2>
+      <div class="category-grid">
+        <a class="category-card" href="#shop" data-category="Bats">
+          <span class="category-card__icon"></span>
+          <span class="category-card__name">Bats</span>
+          <span class="category-card__count">Willow &amp; composite</span>
+        </a>
+        <a class="category-card" href="#shop" data-category="Balls">
+          <span class="category-card__icon">🔴</span>
+          <span class="category-card__name">Balls</span>
+          <span class="category-card__count">Match &amp; training</span>
+        </a>
+        <a class="category-card" href="#shop" data-category="Gloves">
+          <span class="category-card__icon">🧤</span>
+          <span class="category-card__name">Gloves</span>
+          <span class="category-card__count">Batting &amp; keeping</span>
+        </a>
+        <a class="category-card" href="#shop" data-category="Protective">
+          <span class="category-card__icon">⛑️</span>
+          <span class="category-card__name">Protection</span>
+          <span class="category-card__count">Helmets &amp; pads</span>
+        </a>
+        <a class="category-card" href="#shop" data-category="Gear">
+          <span class="category-card__icon">🎒</span>
+          <span class="category-card__name">Kit bags</span>
+          <span class="category-card__count">Tour ready</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="shop" id="shop" aria-labelledby="shop-title">
+      <div class="shop__head">
+        <div>
+          <p class="eyebrow">The collection</p>
+          <h2 id="shop-title">Match-day essentials</h2>
+        </div>
+        <div class="shop__controls">
+          <label class="sort">
+            <span>Sort</span>
+            <select id="sort-select">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="rating">Top rated</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+
+      <p class="results-line" id="results-line" role="status" aria-live="polite"></p>
+
+      <div class="product-grid" id="product-grid"></div>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <span aria-hidden="true">🏏</span>
+        <h3>No gear matches that search</h3>
+        <p>Try a different keyword or clear the filters to see the full range.</p>
+        <button class="btn btn--primary" id="clear-filters">Clear filters</button>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="why" id="why-us" aria-labelledby="why-title">
+      <div class="why__intro">
+        <p class="eyebrow">Why KSN Cricket</p>
+        <h2 id="why-title">Built by people who actually play</h2>
+        <p>
+          Every bat is knocked in and weighed before it leaves the shop. Every ball is
+          checked for seam alignment. If it wouldn't survive our own Saturday fixture,
+          we don't stock it.
+        </p>
+      </div>
+      <ul class="why__list">
+        <li>
+          <span class="why__num">01</span>
+          <h3>Hand-picked willow</h3>
+          <p>Grade 1 to Grade 3 clefts selected for grain straightness and ping, not just price.</p>
+        </li>
+        <li>
+          <span class="why__num">02</span>
+          <h3>Free knocking-in</h3>
+          <p>Every bat over ₹150 arrives match-ready after a 6-hour machine and mallet session.</p>
+        </li>
+        <li>
+          <span class="why__num">03</span>
+          <h3>Season-long support</h3>
+          <p>Free re-grip, seam checks and glove repairs for the first 12 months on any kit.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <div>
+        <h2 id="newsletter-title">New arrivals, before they sell out</h2>
+        <p>One email a month. Restock alerts, pitch reports and pre-season kit drops.</p>
+      </div>
+      <form class="newsletter__form" id="newsletter-form">
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input type="email" id="newsletter-email" placeholder="you@clubcricket.com" required />
+        <button class="btn btn--primary" type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__brand">
+      <span class="brand__mark" aria-hidden="true">◗</span>
+      <span class="brand__text">KSN<span>Cricket</span></span>
+      <p>Independent cricket shop · Manchester, UK</p>
+    </div>
+    <div class="site-footer__cols">
+      <div>
+        <h3>Shop</h3>
+        <a href="#shop">Bats</a>
+        <a href="#shop">Balls</a>
+        <a href="#shop">Protection</a>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <a href="#why-us">Shipping</a>
+        <a href="#why-us">Returns</a>
+        <a href="#why-us">Bat care guide</a>
+      </div>
+      <div>
+        <h3>Club</h3>
+        <a href="#why-us">Team orders</a>
+        <a href="#why-us">Sponsorship</a>
+        <a href="#why-us">Contact</a>
+      </div>
+    </div>
+    <p class="site-footer__credits">
+      Product photography via
+      <a href="https://www.pexels.com/" rel="noopener">Pexels</a>
+      (Mir Burhan, Imtiaz Ahmed, Manoj Poosam, Jurie Maree, Sandeep Singh, Patrick Case).
+      “White bating pads” by Zulki12 and kit-bag photos by Acabashi via
+      <a href="https://commons.wikimedia.org/" rel="noopener">Wikimedia Commons</a>,
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>.
+    </p>
+    <p class="site-footer__legal">© <span id="year"></span> KSN Cricket Co. All rights reserved.</p>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+    <header class="cart-drawer__head">
+      <h2 id="cart-title">Your kit bag</h2>
+      <button class="icon-button" id="cart-close" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </header>
+
+    <div class="cart-drawer__body" id="cart-body"></div>
+
+    <footer class="cart-drawer__foot">
+      <div class="cart-total">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">₹0.00</strong>
+      </div>
+      <p class="cart-note" id="cart-note">Add ₹150.00 more for free delivery.</p>
+      <button class="btn btn--primary btn--block" id="checkout-btn">Checkout</button>
+      <button class="btn btn--ghost btn--block" id="cart-continue">Continue shopping</button>
+    </footer>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
